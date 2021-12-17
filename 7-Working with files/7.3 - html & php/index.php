@@ -1,29 +1,24 @@
-<?php require 'database.php'; ?>
+<?php  
+    require 'database.php';
+
+    $leeftijd = 15;
+?>
 <html>
 <head>
 </head>
 <body>
 
-<div class = "menu">
-    <?php include 'menu.php'; ?>
-</div>
+    <div class="menu">
+        <?php include 'menu.php'; ?> <!-- Op deze regel wordt een menu ingevoegd -->
+    </div>
 
-<div id="isMeerderJarig">
-    <?php
-
-    $leeftijd = 18;
-    $minderjarig = 16;
-  
-    if( $leeftijd > 16){
-        echo " <h5> je bent meerderjarig </h5>";
-    }elseif( $minderjarig < $leeftijd){
-        echo "je bent nog niet volwassen";
-    }else {
-          echo "Hallo";
-    }
-
-   ?>
-</div>
+    <div id="leeftijdChecker">
+        <?php
+            if($leeftijd < 16 ){
+                echo "<h6>Je bent te jong om deze pagina te bekijken</h6>";
+            }
+        ?>
+    </div>
 
 </body>
 </html>
